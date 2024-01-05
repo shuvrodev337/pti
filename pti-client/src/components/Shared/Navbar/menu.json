@@ -1,0 +1,35 @@
+[
+
+{
+    "id":1,
+    "title": "Home",
+    "path":"/home"
+},
+{
+    "id":2,
+    "title": "Details",
+    "path":"/details"
+},
+{
+    "id":3,
+    "title": "Category",
+    "path":"/categoey"
+},
+{
+    "id":4,
+    "title": "My Favourites",
+    "path":"/my-favourites"
+},
+{
+    "id":5,
+    "title": "Profile",
+    "path":"/profile"
+},
+{
+    "id":6,
+    "title": "Log in/Sign Up",
+    "path":"/login"
+}
+
+
+]

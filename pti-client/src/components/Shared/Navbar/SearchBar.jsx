@@ -6,7 +6,7 @@ const SearchBar = () => {
     <div className="w-[400px] mx-auto bg-white  rounded-md ">
       <div className="mt-1 relative rounded-md ">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <BiSearch className="text-red-500 text-xl" />
+          <BiSearch className="text-[#FD4E03] text-xl" />
         </div>
         <input
           type="text"
