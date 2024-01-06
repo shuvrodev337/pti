@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Image */}
           <div className="w-2/5">
-                <img className="w-1/2 mx-auto" src={footerImg} alt="banner-image" />
+                <img className="w-1/2 mx-auto" src={footerImg} alt="footer-image" />
             </div>
         </div>
       </Container>

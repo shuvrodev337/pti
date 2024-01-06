@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
-import menuItems from './menu.json'
+import menuItems from "./menu.json";
 import { Link } from "react-router-dom";
 const Dropdown = () => {
   // const [age, setAge] = useState('');
@@ -25,11 +25,14 @@ const Dropdown = () => {
       </button>
       {isOpen && (
         <div className="bg-white absolute top-14 flex flex-col items-start rounded-lg p-3 w-full">
-          {menuItems.map((item)=>
-          <Link key={item.id} to={item?.path}><h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            {item.title}
-          </h3></Link>
-          )}
+          {menuItems.map((item) => (
+            <Link
+              key={item.id}
+              to={item?.path}
+              className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
+              <h3>{item.title}</h3>
+            </Link>
+          ))}
         </div>
       )}
     </div>
@@ -38,8 +41,8 @@ const Dropdown = () => {
 
 export default Dropdown;
 
-
-{/* <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
+{
+  /* <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
             Home
           </h3>
           <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
@@ -56,4 +59,5 @@ export default Dropdown;
           </h3>
           <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
             Log in/Sign Up
-          </h3> */}
+          </h3> */
+}
