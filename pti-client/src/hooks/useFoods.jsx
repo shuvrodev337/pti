@@ -21,7 +21,7 @@ const useFoods = () => {
         }
         fetchData()
     },[])
-return [isLoading,foods, serverError]
+return [isLoading,foods,setFoods, serverError]
 };
 
 export default useFoods;

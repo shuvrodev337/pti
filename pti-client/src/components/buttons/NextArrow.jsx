@@ -4,8 +4,10 @@ const NextArrow = ({ onClick }) => {
     <div
       className="absolute right-[50px] -top-[30px] cursor-pointer "
       onClick={onClick}
+      
+      
     >
-      <FaGreaterThan className=""/>
+      <FaGreaterThan  className="text-gray-800"/>
     </div>
   );
 };
