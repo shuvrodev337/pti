@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import MySlider from "./MySlider";
 import { FoodContext } from "../../providers/FoodsProvider";
-import { Box, Modal, Typography } from "@mui/material";
-import AddFood from "../../pages/AddFood/AddFood";
+import { Box, Modal, } from "@mui/material";
+import AddFoodModal from "../AddFoodModal/AddFoodModal";
 
 const FoodSliders = () => {
 const {isLoading,foods,setFoods, serverError} = useContext(FoodContext)
@@ -16,15 +16,17 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 600,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  // width: 600,
+  bgcolor: '#F99F1C',
+  borderRadius: '0.5rem',
+  // bgcolor: 'background.paper',
+  // border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 2,
 };
 
   return (
-    <div className=" my-20 gap-10">
+    <div className=" my-20 gap-10 rouded-lg">
       
       {isLoading && <span>Loading...</span>}
       {isLoading && serverError ? (
@@ -45,13 +47,8 @@ const style = {
   aria-describedby="modal-modal-description"
 >
   <Box sx={style}>
-    {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-      Text in a modal
-    </Typography>
-    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-    </Typography> */}
-    <AddFood foods={foods} setFoods={setFoods} handleClose={handleClose}></AddFood>
+    
+    <AddFoodModal foods={foods} setFoods={setFoods} handleClose={handleClose}></AddFoodModal>
   </Box>
 </Modal>
           </div>

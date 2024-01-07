@@ -1,33 +1,33 @@
-import foodImg from "../../assets/images/Image1.png";
 import { useForm } from "react-hook-form";
 import generateRandomId from "../../utils/generateRandomId";
 
-const AddFood = ({foods,setFoods,handleClose}) => {
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+const AddFoodModal = ({foods,setFoods,handleClose}) => {
 
 
-  
-  const onSubmit = (addedFood) => {
-      addedFood.Id = generateRandomId();
-      addedFood.price = parseInt(addedFood.price)
-      const newFoods = [...foods, addedFood]
-      setFoods(newFoods)
-      handleClose()
-  };
-  return (
-    <div className="bg-[#F99F1C] rounded-3xl flex justify-center items-center">
-      <div className="w-2/5">
-        <img className="w-full mx-auto" src={foodImg} alt="banner-image" />
-      </div>
-      <div className="w-3/5  p-6 ">
+    //Form data process
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
+    
+    
+      
+      const onSubmit = (addedFood) => {
+          addedFood.Id = generateRandomId();
+          addedFood.price = parseInt(addedFood.price)
+          const newFoods = [...foods, addedFood]
+          setFoods(newFoods)
+          handleClose()
+      };
+
+
+    return (
+        <div className="w-[300px] md:w-[600px] mx-auto p-3 md:p-6">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="space-y-6 ng-untouched ng-pristine ng-valid w-9/12 mx-auto"
+          className="space-y-6 ng-untouched ng-pristine ng-valid w-full mx-auto"
         >
           <div className="space-y-4 ">
             {/* Input fields here */}
@@ -42,7 +42,7 @@ const AddFood = ({foods,setFoods,handleClose}) => {
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
                 {...register("Name", { required: true })}                
               />
-              {errors.name?.type === "required" && (
+              {errors.Name?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">Food name is required!</p>
                   )}
             </div>
@@ -60,7 +60,7 @@ const AddFood = ({foods,setFoods,handleClose}) => {
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
                 {...register("ImageUrl", { required: true })}
               />
-              {errors.imageUrl?.type === "required" && (
+              {errors.ImageUrl?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">URL field required!</p>
                   )}
             </div>
@@ -75,14 +75,14 @@ const AddFood = ({foods,setFoods,handleClose}) => {
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
                 {...register("Price", { required: true })}
               />
-              {errors.price?.type === "required" && (
+              {errors.Price?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">Please put a valid number!</p>
                   )}
             </div>
-            <div className="flex items-baseline justify-around">
+            <div className="flex flex-col items-baseline justify-around">
               <label
                 htmlFor="popular"
-                className="block text-lg text-white "
+                className="block md:text-lg text-white "
               >
                 <input
                   type="checkbox"
@@ -94,12 +94,12 @@ const AddFood = ({foods,setFoods,handleClose}) => {
               </label>
               <label
                 htmlFor="recommended"
-                className="block text-lg text-white "
+                className="block md:text-lg text-white "
               >
                 <input
                   type="checkbox"
                   id="recommended"
-                  className=" text-blue-500 focus:ring-blue-500 "
+                  className=" text-blue-500 focus:ring-blue-500 h-4 w-4"
                   {...register("IsRecommended", { required: false })}
                 />
                 <span className="ml-2">Recommended</span>
@@ -116,8 +116,7 @@ const AddFood = ({foods,setFoods,handleClose}) => {
           </div>
         </form>
       </div>
-    </div>
-  );
+    );
 };
 
-export default AddFood;
+export default AddFoodModal;

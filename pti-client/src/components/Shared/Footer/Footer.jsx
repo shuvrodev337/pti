@@ -13,13 +13,13 @@ const Footer = () => {
     <footer className="px-4 divide-y relative bottom-0 left-0 bg-[#F99F1C] ">
       <Container>
         {/* Info */}
-        <div className="flex pb-10">
+        <div className="md:flex pb-10">
           {/* Information */}
-          <div className="w-3/5 flex  flex-col justify-end  p-12 gap-28">
+          <div className="md:w-3/5 flex  flex-col justify-end  p-12 gap-28">
             {/* email-subscription */}
             <div
               id="email-inputField"
-              className="w-4/5  bg-white  rounded-2xl relative "
+              className="w-full md:w-4/5  bg-white  rounded-2xl relative "
             >
               <input
                 type="text"
@@ -37,15 +37,15 @@ const Footer = () => {
             </div>
 
             {/* Copyright-info */}
-            <div>
-            <Logo />
-            <div className="flex justify-between  items-baseline">
+            <div className="space-y-4">
+            <div className="text-center md:text-left"><Logo/></div>
+            <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:items-baseline">
               
-                <p className="font-semibold">Copyright©Tripp.All rights reserved</p>
+                <p className="font-semibold text-sm md:text-base">Copyright©Tripp.All rights reserved</p>
               <div className="flex gap-2 ">
-                <AiOutlineGoogle className=" h-8 w-8 bg-[#FEDDBA] p-2 rounded-full text-[#FC5E04] " />
-                <AiOutlineTwitter className=" h-8 w-8 bg-[#FEDDBA] p-2 rounded-full text-[#FC5E04] " />
-                <AiOutlineInstagram className=" h-8 w-8 bg-[#FEDDBA] p-2 rounded-full text-[#FC5E04] " />
+                <AiOutlineGoogle className=" h-8 w-8 bg-[#FC5E04] md:bg-[#FEDDBA]  p-2 rounded-full text-[#FEDDBA] md:text-[#FC5E04] " />
+                <AiOutlineTwitter className="h-8 w-8 bg-[#FC5E04] md:bg-[#FEDDBA]  p-2 rounded-full text-[#FEDDBA] md:text-[#FC5E04] " />
+                <AiOutlineInstagram className="h-8 w-8 bg-[#FC5E04] md:bg-[#FEDDBA]  p-2 rounded-full text-[#FEDDBA] md:text-[#FC5E04]  " />
               </div>
             </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* Image */}
-          <div className="w-2/5">
+          <div className="w-2/5 hidden md:block">
                 <img className="w-1/2 mx-auto" src={footerImg} alt="footer-image" />
             </div>
         </div>

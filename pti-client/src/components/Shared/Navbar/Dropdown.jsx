@@ -11,7 +11,8 @@ const Dropdown = () => {
   const [isOpen, SetIsOpen] = useState(false);
 
   return (
-    <div className="relative flex flex-col items-center w-[180px] rounded-lg">
+    // w-[100px] md:w-[180px]
+    <div className="relative flex flex-col items-center w-full rounded-lg md:w-[180px]">
       <button
         onClick={() => SetIsOpen(!isOpen)}
         className="bg-white py-0 px-2 w-full flex items-center justify-between font-semibold text-base rounded-lg tracking-wider border-4 border-transparent active:border-white duration-300 active:text-[#FD4E03]"
