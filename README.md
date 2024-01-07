@@ -1,8 +1,9 @@
-# React + Vite
+# Client side- React + Vite 
+# ExpressJS Server
 
 # Project: pti. food Item project
 
-# How To Run My Project
+# How To Run My Project (client-side)
 * clone the project 
 * Change directory into ./pti-client
 * Run "npm install" to intall all the dependencies
@@ -22,5 +23,5 @@
 
 
 ## Live Link
-Hosted in Firebase -> [Task Manager](https://659ac6ae8ca97ba47e928e3f--helpful-empanada-d62835.netlify.app/)
+Hosted in Netlify -> [pti](https://659ac6ae8ca97ba47e928e3f--helpful-empanada-d62835.netlify.app/)
 
