@@ -1,13 +1,9 @@
-import useFoods from "../../hooks/useFoods";
 import foodImg from "../../assets/images/Image1.png";
 import { useForm } from "react-hook-form";
 import generateRandomId from "../../utils/generateRandomId";
-import {  useNavigate } from "react-router-dom";
 
-const AddFood = () => {
-    const navigate = useNavigate()
+const AddFood = ({foods,setFoods,handleClose}) => {
 
-  const [, foods,setFoods] = useFoods();
   const {
     register,
     handleSubmit,
@@ -19,10 +15,9 @@ const AddFood = () => {
   const onSubmit = (addedFood) => {
       addedFood.Id = generateRandomId();
       addedFood.price = parseInt(addedFood.price)
-      console.log(addedFood);
       const newFoods = [...foods, addedFood]
       setFoods(newFoods)
-      navigate("/")
+      handleClose()
   };
   return (
     <div className="bg-[#F99F1C] rounded-3xl flex justify-center items-center">
@@ -45,7 +40,7 @@ const AddFood = () => {
                 id="name"
                 placeholder="Enter Food Name Here"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
-                {...register("name", { required: true })}                
+                {...register("Name", { required: true })}                
               />
               {errors.name?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">Food name is required!</p>
@@ -63,14 +58,14 @@ const AddFood = () => {
                 id="imageUrl"
                 placeholder="Enter Food Image URL"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
-                {...register("imageUrl", { required: true })}
+                {...register("ImageUrl", { required: true })}
               />
               {errors.imageUrl?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">URL field required!</p>
                   )}
             </div>
             <div>
-              <label htmlFor="price" className="block mb-2 text-sm text-white">
+              <label htmlFor="Price" className="block mb-2 text-sm text-white">
                 Price
               </label>
               <input
@@ -78,7 +73,7 @@ const AddFood = () => {
                 id="price"
                 placeholder="Enter Food Price Here"
                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-none bg-gray-200 text-gray-900"
-                {...register("price", { required: true })}
+                {...register("Price", { required: true })}
               />
               {errors.price?.type === "required" && (
                     <p className="text-red-600 mt-2 text-sm">Please put a valid number!</p>
