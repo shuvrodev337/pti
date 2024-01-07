@@ -1,10 +1,9 @@
-import useFoods from "../../hooks/useFoods";
-
+import { useContext } from "react";
 import MySlider from "./MySlider";
+import { FoodContext } from "../../providers/FoodsProvider";
 
 const FoodSliders = () => {
-  const [isLoading,foods,setFoods, serverError] = useFoods();
-
+const {isLoading,foods,setFoods, serverError} = useContext(FoodContext)
   return (
     <div className=" my-20 gap-10">
       

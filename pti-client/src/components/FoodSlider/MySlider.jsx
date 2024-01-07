@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 const MySlider = ({ heading, foods,setFoods }) => {
   const navigate = useNavigate();
+
+  // Slider settings
   const settings = {
     arrows: true,
     infinite: false,
@@ -40,9 +42,10 @@ const MySlider = ({ heading, foods,setFoods }) => {
       },
     ],
   };
+
+  // add food item 
   const addFood = () => {
     navigate('/add-food')
-  
   };
   return (
     <div className="my-10 relative">
