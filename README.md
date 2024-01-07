@@ -1,7 +1,8 @@
-# Client side- React + Vite 
-# ExpressJS Server
-
 # Project: pti. food Item project
+
+* Client side- React + Vite 
+* Server- ExpressJS 
+
 
 # How To Run My Project (client-side)
 * clone the project 
@@ -23,5 +24,5 @@
 
 
 ## Live Link
-Hosted in Netlify -> [pti](https://659ac6ae8ca97ba47e928e3f--helpful-empanada-d62835.netlify.app/)
+Hosted in Netlify -> [pti](https://659adb2f02b53dab77980203--helpful-empanada-d62835.netlify.app//)
 

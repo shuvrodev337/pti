@@ -1,4 +1,6 @@
 import bannerImg from "../../assets/images/Image1.png"
+import LazyLoad from "react-lazy-load";
+
 const Banner = () => {
     return (
         <div className="md:bg-[#F99F1C] rounded-3xl flex flex-col md:flex-row justify-center items-center gap-6 md:px-4">
@@ -7,7 +9,10 @@ const Banner = () => {
                 <p className="text-base md:text-lg ">Authentic Food, Quick Service, Fast Delivery</p>
             </div>
             <div className="md:w-2/5 bg-[#FD9460] md:bg-inherit rounded-3xl">
+                <LazyLoad>
+
                 <img className="w-full mx-auto " src={bannerImg} alt="banner-image" />
+                </LazyLoad>
             </div>
             
         </div>

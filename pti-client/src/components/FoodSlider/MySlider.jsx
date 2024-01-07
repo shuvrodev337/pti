@@ -8,7 +8,7 @@ const MySlider = ({ heading, foods, handleOpen }) => {
   // Slider settings
   const settings = {
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -19,23 +19,25 @@ const MySlider = ({ heading, foods, handleOpen }) => {
         breakpoint: 1280,
         settings: {
           slidesToShow: 4.7,
-          //   slidesToScroll: 1,
-          //   infinite: true,
+            slidesToScroll: 1,
+            infinite: true,
         },
       },
       {
         breakpoint: 1000,
         settings: {
           slidesToShow: 4.7,
-          //   slidesToScroll: 2,
-          //   initialSlide: 2
+            slidesToScroll: 1,
+            infinite: true,
         },
       },
       {
         breakpoint: 650,
         settings: {
           slidesToShow: 2.7,
-          //   slidesToScroll: 1
+            slidesToScroll: 1,
+            infinite: true,
+
         },
       },
     ],
