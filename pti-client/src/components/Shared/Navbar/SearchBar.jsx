@@ -3,7 +3,6 @@ import { BiSearch } from "react-icons/bi";
 
 const SearchBar = () => {
   return (
-    // w-[200px] md:w-[400px]
     <div className="w-full mx-auto bg-white  rounded-md md:w-[400px]">
       <div className="mt-1 relative rounded-md ">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

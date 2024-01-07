@@ -8,7 +8,9 @@ const FoodsProvider = ({children}) => {
     const [isLoading, setIsLoading] =useState(false)
     const [foods,setFoods] = useState([])
     const [serverError,setServerError] = useState(null)
-    const url = 'http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10'
+    // const url = 'http://www.api.technicaltest.quadtheoryltd.com/api/Item?page=1&pageSize=10'
+    // Due to above insecure (HTTP) endpoint, I have made an alternative server and an api endpoint with same data.
+    const url = 'https://pti-server.vercel.app/all-foods'
 
     useEffect(()=>{
         setIsLoading(true)

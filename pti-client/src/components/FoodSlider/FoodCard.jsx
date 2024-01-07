@@ -7,7 +7,7 @@ const FoodCard = ({ food }) => {
         <img
           src={ImageUrl}
           alt="food"
-          className="h-[250px] w-[100%] object-cover hover:scale-125 duration-1000 rounded-lg"
+          className="h-[150px] md:h-[250px] w-[100%] object-cover hover:scale-125 duration-1000 rounded-lg"
         />
         </div>
         

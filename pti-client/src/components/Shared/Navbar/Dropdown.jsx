@@ -3,15 +3,10 @@ import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import menuItems from "./menu.json";
 import { Link } from "react-router-dom";
 const Dropdown = () => {
-  // const [age, setAge] = useState('');
 
-  // const handleChange = (event) => {
-  //   setAge(event.target.value);
-  // };
   const [isOpen, SetIsOpen] = useState(false);
 
   return (
-    // w-[100px] md:w-[180px]
     <div className="relative flex flex-col items-center w-full rounded-lg md:w-[180px]">
       <button
         onClick={() => SetIsOpen(!isOpen)}
@@ -29,7 +24,7 @@ const Dropdown = () => {
           {menuItems.map((item) => (
             <Link
               key={item.id}
-              to={item?.path}
+              // to={item?.path}
               className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
               <h3>{item.title}</h3>
             </Link>
@@ -42,23 +37,3 @@ const Dropdown = () => {
 
 export default Dropdown;
 
-{
-  /* <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            Home
-          </h3>
-          <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            Details
-          </h3>
-          <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            Category
-          </h3>
-          <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            My Favourites
-          </h3>
-          <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            Profile
-          </h3>
-          <h3 className="hover:bg-gray-200 cursor-pointer  border-l-transparent  border-l-4  p-2 w-full rounded-lg hover:text-[#FD4E03]">
-            Log in/Sign Up
-          </h3> */
-}

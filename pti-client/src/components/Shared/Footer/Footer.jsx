@@ -15,21 +15,21 @@ const Footer = () => {
         {/* Info */}
         <div className="md:flex pb-10">
           {/* Information */}
-          <div className="md:w-3/5 flex  flex-col justify-end  p-12 gap-28">
+          <div className="md:w-3/5 flex  flex-col justify-end  p-12 gap-14 md:gap-28 ">
             {/* email-subscription */}
             <div
               id="email-inputField"
-              className="w-full md:w-4/5  bg-white  rounded-2xl relative "
+              className="w-[320px] md:w-[500px]  bg-white  rounded-2xl relative "
             >
               <input
                 type="text"
                 id="subscribe"
                 name="subscribe"
-                className=" py-4 px-4 block w-full leading-5 rounded-2xl outline-none sm:text-sm sm:leading-5"
+                className=" py-4 px-6 block w-full leading-5 rounded-2xl outline-none sm:text-sm sm:leading-5"
                 placeholder="Enter your email"
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center ">
-                <button className="bg-[#FC6011] text-white px-4 py-2 rounded-2xl cursor-pointer">
+                <button className="md:bg-[#FC6011]  text-[#FC6011] md:text-white px-4 py-2 rounded-2xl cursor-pointer">
                   Subscribe
                   <AiOutlineArrowRight className="inline w-8 text-xl"/>
                 </button>
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright-info */}
-            <div className="space-y-4">
+            <div className="space-y-8">
             <div className="text-center md:text-left"><Logo/></div>
             <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:items-baseline">
               

@@ -19,8 +19,6 @@ const style = {
   // width: 600,
   bgcolor: '#F99F1C',
   borderRadius: '0.5rem',
-  // bgcolor: 'background.paper',
-  // border: '2px solid #000',
   boxShadow: 24,
   p: 2,
 };
@@ -36,8 +34,8 @@ const style = {
         
           <div className=" ">
             
-          <MySlider heading={'Popular'} foods={foods.filter(food=>food.IsPopular === true)} setFoods={setFoods} handleOpen={handleOpen}></MySlider>
-          <MySlider heading={'Recommended'} foods={foods.filter(food=>food.IsRecommended === true)} setFoods={setFoods}  handleOpen={handleOpen}></MySlider>
+          <MySlider heading={'Popular'} foods={foods.filter(food=>food.IsPopular === true)} handleOpen={handleOpen}></MySlider>
+          <MySlider heading={'Recommended'} foods={foods.filter(food=>food.IsRecommended === true)}  handleOpen={handleOpen}></MySlider>
           
 {/* Modal */}
 <Modal

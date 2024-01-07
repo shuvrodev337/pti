@@ -2,10 +2,8 @@ import Slider from "react-slick";
 import FoodCard from "./FoodCard";
 import NextArrow from "../buttons/NextArrow";
 import PrevArrow from "../buttons/PrevArrow";
-// import { useNavigate } from "react-router-dom";
 
-const MySlider = ({ heading, foods,setFoods, handleOpen }) => {
-  // const navigate = useNavigate();
+const MySlider = ({ heading, foods, handleOpen }) => {
 
   // Slider settings
   const settings = {
@@ -20,7 +18,7 @@ const MySlider = ({ heading, foods,setFoods, handleOpen }) => {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4.7,
           //   slidesToScroll: 1,
           //   infinite: true,
         },
@@ -28,7 +26,7 @@ const MySlider = ({ heading, foods,setFoods, handleOpen }) => {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4.7,
           //   slidesToScroll: 2,
           //   initialSlide: 2
         },
@@ -36,21 +34,17 @@ const MySlider = ({ heading, foods,setFoods, handleOpen }) => {
       {
         breakpoint: 650,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2.7,
           //   slidesToScroll: 1
         },
       },
     ],
   };
 
-  // add food item 
-  // const addFood = () => {
-  //   navigate('/add-food')
-  // };
   return (
     <div className="my-10 relative">
       <div className="flex justify-between">
-        <h3 className="text-xl my-2 ml-2">{heading}</h3>
+        <h3 className="text-lg md:text-xl my-2 ml-2">{heading}</h3>
         <button
           onClick={() => handleOpen()}
           className="text-[#F8854B] mr-24 hover:text-[#FD4E03]"
